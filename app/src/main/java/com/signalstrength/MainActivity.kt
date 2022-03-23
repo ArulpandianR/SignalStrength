@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-
+///hjkhkjhk
     private var gridLayout: GridLayout? = null
     val mainHandler = Handler(Looper.getMainLooper())
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,16 +28,8 @@ class MainActivity : AppCompatActivity() {
 
         gridLayout = findViewById(R.id.gridLayout)
 
-        if (ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                101
-            )
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),101 )
         }
         start.setOnClickListener {
             stop.isEnabled = true
@@ -52,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         clear.setOnClickListener {
             gridLayout?.removeAllViews()
         }
+
+
     }
 
     private val updateTextTask = object : Runnable {
