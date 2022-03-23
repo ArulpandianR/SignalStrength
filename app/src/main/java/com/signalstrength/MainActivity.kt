@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-///hjkhkjhk
+///hjkhkjhkrrrrr
     private var gridLayout: GridLayout? = null
     val mainHandler = Handler(Looper.getMainLooper())
     override fun onCreate(savedInstanceState: Bundle?) {
